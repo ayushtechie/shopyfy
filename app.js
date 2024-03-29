@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const adminRoutes = require('./routes/admin')
 
@@ -11,6 +12,10 @@ const MONGO_URI = "mongodb+srv://ayush:v5M8iknYBVHuYNyP@cluster0.onu2gsh.mongodb
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
+
+app.use(bodyParser.urlencoded({extended: false}))
+
+
 app.use('/admin',adminRoutes)
 app.use(shopRoutes)
 app.use(authRoutes)

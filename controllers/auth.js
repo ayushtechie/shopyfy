@@ -4,3 +4,11 @@ exports.getLogin = (req, res, next) => {
         path: '/login'
     })
 }
+
+exports.postLogin = (req, res, next) => {
+    const email = req.body.email
+    const password = req.body.password
+
+    console.log(email, password);
+    res.redirect('/')
+}
