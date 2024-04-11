@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongodb-session')(session)
+const flash = require('connect-flash')
 
 const adminRoutes = require('./routes/admin')
 
@@ -19,7 +20,7 @@ const store = new MongoDbStore({
 })
 
 
-
+app.use(flash())
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
