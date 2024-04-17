@@ -4,37 +4,49 @@
     <body style="background-color: #ffc7f7;">
         <%- include('../includes/navigation.ejs') %>
 
-        <main>
-            <div class="container mx-auto mt-8">
-                <div class="max-w-xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-                    <!-- Product Image -->
-                    <img class="w-full h-64 object-cover object-center" src="https://via.placeholder.com/400x300"
-                        alt="Product Image">
-        
-                    <div class="p-4">
-                        <!-- Product Title -->
-                        <h2 class="text-xl font-semibold text-gray-800">Product Title</h2>
-        
-                        <!-- Product Description -->
-                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                            gravida, lectus vel ullamcorper tincidunt, velit urna vestibulum mi.</p>
-        
-                        <!-- Product Price -->
-                        <p class="mt-2 text-gray-900 font-bold">$99.99</p>
-        
-                        <!-- Action Buttons (e.g., Like, Add to Cart) -->
-                        <div class="flex items-center mt-4">
-                            <button
-                                class="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Add
-                                to Cart</button>
-                            <button
-                                class="ml-4 px-4 py-2 bg-gray-200 text-gray-800 text-sm font-semibold rounded hover:bg-gray-300 focus:outline-none focus:bg-gray-300">Like</button>
+            <main>
+                <% if (products.length < 0) { %>
+                 <% } else { %>
+                  no products found
+                <% } %>
+
+                <div class="container mx-auto mt-8">
+                    <div class="max-w-xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+                        <!-- Product Image -->
+                        <img class="w-full h-64 object-cover object-center" src="https://via.placeholder.com/400x300"
+                            alt="Product Image">
+
+                        <div class="p-4">
+                            <!-- Product Title -->
+                            <h2 class="text-xl font-semibold text-gray-800">Product Title</h2>
+
+                            
+
+                            <!-- Product Price -->
+                            <p>Price
+                                <span class="mt-2 text-gray-900 font-bold">$99.99</span>
+                            </p>
+                            <p>Daily income
+                                <span class="mt-2 text-gray-900 font-bold">$99.99</span>
+                            </p>
+                            <p>Validity period
+                                <span class="mt-2 text-gray-900 font-bold">99 Days</span>
+                            </p>
+                            <p>Total income
+                                <span class="mt-2 text-gray-900 font-bold">$99.99</span>
+                            </p>
+
+                            <!-- Action Buttons (e.g., Like, Add to Cart) -->
+                            <div class="flex items-center mt-4">
+                                <button
+                                    class="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Buy</button>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
 
-        </body>
+    </body>
 
-        </html>
+    </html>
